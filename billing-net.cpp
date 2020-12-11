@@ -7,20 +7,20 @@ using namespace std;
 
 int main()
 {
-char cust[50],tipe[10],bonus[15],lagi,kode,makan,masih;
+char cust[50],tipe[10],bonus[15],lagi,kode,milih,masih;
 int j,k,l,i,n,lama,hrg,sewa,cash,total,kembali,adm,atas,kode1,harga,jumlah,total1,total3,bayar,kembali1;
 n=2;
 
 atas:
-cout<<" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"<<endl;
-    cout<<"                                                                              "<<endl;
-    cout<<"                                 SLEEP NET                                    "<<endl;
-    cout<<"                        Selamat Datang Di SLEEP NET                           "<<endl;
-    cout<<"                        contact:yogasaputra@zoho.com                          "<<endl;
-    cout<<"                                                                              "<<endl;
-    cout<<" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"<<endl<<endl;
-cout<<" Nama Penyewa\t\t: ";gets(cust);
-cout<<" Kode Layanan [I/P/G]\t: ";cin>>kode;
+cout<<" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"<<endl;
+cout<<" |                                                                             |"<<endl;
+cout<<" |                                SLEEP NET                                    |"<<endl;
+cout<<" |                       Selamat Datang Di SLEEP NET                           |"<<endl;
+cout<<" |                       contact:yogasaputra@sleep.net                         |"<<endl;
+cout<<" |                                                                             |"<<endl;
+cout<<" |_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|"<<endl<<endl;
+cout<<"Nama Penyewa          : ";gets(cust);
+cout<<"Kode Layanan [I/P/G]  : ";cin>>kode;
 switch(kode)
 {
     case'i':
@@ -40,100 +40,102 @@ switch(kode)
     break;
     default:
     cout<<endl;
-    cout<<" Kode Yang Anda Masukan Salah"<<endl;
+    cout<<"Kode Yang Anda Masukan Salah"<<endl;
           }
-cout<<" Waktu Bermain\t\t: ";cin>>lama;
+cout<<"Waktu Bermain         : ";cin>>lama;
 if(lama>=1)
 
 system ("cls");
 adm=1000;
 sewa=lama*hrg;
-total=adm+sewa+makan;
-cout<<" SLEEP NET"<<endl<<endl;
-cout<<" Nama Penyewa\t\t: "<<cust<<endl;
-cout<<" Kode Layanan [I/P/G]\t: "<<kode<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama<<endl<<endl;
-cout<<" **************************************"<<endl<<endl;
-cout<<" Tipe \t\t: "<<tipe<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama; cout<<" Jam"<<endl;
-cout<<" Biaya Sewa\t\t: "<<sewa<<endl;
-cout<<" Biaya Parkir\t: "<<adm<<endl;
-cout<<" Total Biaya Sewa\t: "<<total<<endl<<endl;
-cout<<" FASILITAS LAIN SCAN/PRINT?[Y/N] :";cin>>makan;
+total=adm+sewa+milih;
+cout<<"------------------------------------"<<endl;
+cout<<"              SLEEP NET             "<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Nama Penyewa           : "<<cust<<endl;
+cout<<"Kode Layanan [I/P/G]   : "<<kode<<endl;
+cout<<"Waktu Bermain          : "<<lama<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Tipe Layanan           : "<<tipe<<endl;
+cout<<"Waktu Bermain          : "<<lama; cout<<" Jam"<<endl;
+cout<<"Biaya Sewa             : "<<sewa<<endl;
+cout<<"Biaya Parkir           : "<<adm<<endl;
+cout<<"Total Biaya Sewa       : "<<total<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Fasilitas Lain SCAN/PRINT? [Y/N] : ";cin>>milih;
 
-if(makan=='n'||makan=='N')
-goto tdkmakan;
+
+if(milih=='n'||milih=='N')
+goto tdkmilih;
 else
 system ("cls");
 
-makan:
-cout<<" SLEEP NET"<<endl<<endl;
-cout<<" Nama Penyewa\t\t: "<<cust<<endl;
-cout<<" Kode  [I/P/G]\t: "<<kode<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama<<endl<<endl;
-cout<<" **************************************"<<endl<<endl;
-cout<<" Tipe \t\t     : "<<tipe<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama; cout<<" hari"<<endl;
-cout<<" Biaya Sewa\t\t: "<<sewa<<endl;
-cout<<" Biaya Parkir\t: "<<adm<<endl;
-cout<<" Total Biaya Sewa\t: "<<total<<endl<<endl;
-
+milih:
+cout<<"------------------------------------"<<endl;
+cout<<"              SLEEP NET             "<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Nama Penyewa           : "<<cust<<endl;
+cout<<"Kode Layanan [I/P/G]   : "<<kode<<endl;
+cout<<"Waktu Bermain          : "<<lama<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Tipe Layanan           : "<<tipe<<endl;
+cout<<"Waktu Bermain          : "<<lama; cout<<" Jam"<<endl;
+cout<<"Biaya Sewa             : "<<sewa<<endl;
+cout<<"Biaya Parkir           : "<<adm<<endl;
+cout<<"Total Biaya Sewa       : "<<total<<endl;
+cout<<""<<endl;
 
 {
- cout<<"============================"<<endl;
- cout<<"SCAN/PRINT DOKUMEN"<<endl;
- cout<<"============================"<<endl;
- cout<<""<<endl;
- cout<<"Daftar Harga"<<endl;
- cout<<"1. SCAN              Rp. 1.000"<<endl;
- cout<<"2. Print Warna       Rp. 500"<<endl;
- cout<<"3. Print Hitam-Putih Rp. 300"<<endl;
- cout<<"============================"<<endl;
- 
-cout<<'\n'<<"Masukan No Menu Pilihan : ";
- cin>>kode1;
- switch (kode1){
- 	
- case 1:
-  cout<<'\n'<<"SCAN"<<endl;
-        harga=1000;
-  cout<<"Masukan Jumlah : ";
-  cin>>jumlah;
-  total1=harga*jumlah;
-   cout<<"Total Harga  : Rp. "<<total1<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"          SCAN/PRINT DOKUMEN        "<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"1. SCAN               Rp.1.000"<<endl;
+cout<<"2. Print Warna        Rp.500"<<endl;
+cout<<"3. Print Hitam-Putih  Rp.300"<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Masukan Pilihan [1/2/3]: ";cin>>kode1;
 
-  cout<<"Masih ada Y/N  : "; cin>>masih;
-     if(masih=='y'||masih=='Y')
-   goto makan;
-   else
+switch (kode1){	
+case 1:
+cout<<""<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"                SCAN                "<<endl;
+cout<<"------------------------------------"<<endl;
+        harga=1000;
+cout<<"Fasilitas              : "<<kode1<<endl;
+cout<<"Masukan Jumlah         : ";cin>>jumlah;
+  total1=harga*jumlah;
+cout<<"Total Harga            : Rp. "<<total1<<endl;
+cout<<"------------------------------------"<<endl;
+system ("pause");
   break;
   
  case 2:
-  cout<<'\n'<<"Print Warna"<<endl;
+cout<<""<<endl;	
+cout<<"------------------------------------"<<endl;
+cout<<"             PRINT WARNA            "<<endl;
+cout<<"------------------------------------"<<endl;
    harga=500;
-  cout<<"Masukan Jumlah : ";
-  cin>>jumlah;
+cout<<"Fasilitas              : "<<kode1<<endl;
+cout<<"Masukan Jumlah         : ";cin>>jumlah;
    total1=harga*jumlah;
-  cout<<"Total Harga  : Rp. "<<total1<<endl;
-  
-  cout<<"Masih ada Y/N  : "; cin>>masih;
-     if(masih=='y'||masih=='Y')
-     goto makan;
-     else
+cout<<"Total Harga            : Rp. "<<total1<<endl;
+cout<<"------------------------------------"<<endl;
+system ("pause");
      break;
      
  case 3:
-  cout<<'\n'<<"Print Hitam-Putih"<<endl;
+cout<<""<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"          PRINT HITAM PUTIH         "<<endl;
+cout<<"------------------------------------"<<endl;
    harga=300;
-  cout<<"Masukan Jumlah : ";
-  cin>>jumlah;
+cout<<"Fasilitas              : "<<kode1<<endl;   
+cout<<"Masukan Jumlah         : ";cin>>jumlah;
    total1=harga*jumlah;
-  cout<<"Total Harga  : Rp. "<<total1<<endl;
- 
-  cout<<"Masih ada Y/N  : "; cin>>masih;
-     if(masih=='y'||masih=='Y')
-   goto makan;
-   else
+cout<<"Total Harga                   : Rp. "<<total1<<endl;
+cout<<"------------------------------------"<<endl;
+   
   break;
   
  default:
@@ -141,83 +143,39 @@ cout<<'\n'<<"Masukan No Menu Pilihan : ";
  cout<<"Kode yang anda masukkan tidak ada\n";
  system("pause");
  system("cls");
- goto makan;
+ goto milih;
  }
 
-tdkmakan:
+tdkmilih:
 system("cls");
-
-
-cout<<" SLEEP NET"<<endl<<endl;
-cout<<" Nama Penyewa\t\t: "<<cust<<endl;
-cout<<" Kode  [I/P/G]\t: "<<kode<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama<<endl<<endl;
-cout<<" **************************************"<<endl<<endl;
-cout<<" Tipe \t\t: "<<tipe<<endl;
-cout<<" Waktu Bermain\t\t: "<<lama; cout<<" hari"<<endl;
-cout<<" Biaya Sewa\t\t: "<<sewa<<endl;
-cout<<" Biaya Parkir\t: "<<adm<<endl;
-cout<<" Total Biaya Sewa\t: "<<total<<endl<<endl;
-
-
-
-cout<<" *****************************************"<<endl<<endl;
-cout<<" Uang Bayar\t\t: ";cin>>cash;
+total1=total+total1;
+cout<<"------------------------------------"<<endl;
+cout<<"              SLEEP NET             "<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Nama Penyewa           : "<<cust<<endl;
+cout<<"Kode Layanan [I/P/G]   : "<<kode<<endl;
+cout<<"Waktu Bermain          : "<<lama<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Tipe Layanan           : "<<tipe<<endl;
+cout<<"Waktu Bermain          : "<<lama; cout<<" Jam"<<endl;
+cout<<"Biaya Sewa             : "<<sewa<<endl;
+cout<<"Biaya Parkir           : "<<adm<<endl;
+cout<<"Total Biaya Sewa       : "<<total<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Jumlah Fasilitas DiSewa: "<<jumlah;cout<<" Kali"<<endl;
+cout<<"Harga Satuan Fasilitas : "<<harga<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Total Sewa+Fasilitas   : "<<total1<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"Uang Bayar             : ";cin>>cash;
 if (total1>=1)
-{kembali=cash-total-total1;
-}
+{kembali=cash-total1;}
 else
 kembali=cash-total;
-cout<<" Uang Kembali\t\t: "<<kembali<<endl;
+cout<<"Uang Kembali           : "<<kembali<<endl;
 bawah:
 cout<<endl;
 system ("pause");
-system("cls");
-
-for (i=1;i<=n;i++)
-{
-if ((i==1)||(i==n))
-{
-for (j=1;j<=n;j++)
-cout<<"**************************";
-cout<<endl;
+return 0;
 }
-else
-{
-for (j=1;j<=n;j++)
-{
-if ((j==1)||(j==n))
-cout<<"*";
-else
-cout<<"*";
-}
-cout<<endl;
-}
-}
-
-cout<<" TERIMA KASIH " <<cust<<" SUDAH BERMAIN DI SLEEP NET"<<endl<<endl;
-
-for (i=1;i<=n;i++)
-{
-if ((i==1)||(i==n))
-{
-for (j=1;j<=n;j++)
-cout<<"**************************";
-cout<<endl;
-}
-else
-{
-for (j=1;j<=n;j++)
-{
-if ((j==1)||(j==n))
-cout<<"*";
-else
-cout<<"*";
-}
-
-}
-}
-
-system ("pause");
-return 0;}
 }
